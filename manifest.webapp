@@ -1,0 +1,14 @@
+{
+  "name": "GTaxoReader",
+  "description": "Tool to quickly search the Google Product Taxonomy",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Mikel Calderon",
+    "url": "http://mikelcal.co"
+  },
+  "default_locale": "en"
+}
