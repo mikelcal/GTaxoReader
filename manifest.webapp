@@ -1,0 +1,9 @@
+{
+    "name": "GTaxonomyReader",
+    "package_path" : "http://mikelcal.github.io/GTaxoReader/GTaxoReader.zip",
+    "version": "0.5.2",
+    "developer": {
+        "name": "Mikel Calderon",
+        "url": "mikelcal.co"
+    }
+}
