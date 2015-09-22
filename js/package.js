@@ -17,7 +17,7 @@ if (navigator.mozApps) {
                 manifestURL = "http://mikelcal.github.io/GTaxoReader/manifest.webapp";
             install.className = "start-install";
             install.onclick = function () {
-                var installApp = navigator.mozApps.install(manifestURL);
+                var installApp = navigator.mozApps.installPackage(manifestUrl);
                 installApp.onsuccess = function() {
                     install.style.display = "none";
                 };
