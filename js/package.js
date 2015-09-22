@@ -17,7 +17,7 @@ if (navigator.mozApps) {
                 manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";;
             install.className = "start-install";
             install.onclick = function () {
-                var installApp = navigator.mozApps.installPackage(manifestUrl);
+                var installApp = navigator.mozApps.installPackage(manifestURL);
                 installApp.onsuccess = function() {
                     install.style.display = "none";
                 };
