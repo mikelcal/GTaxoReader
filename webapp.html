@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <!-- DataTables Bootstrap -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css"/>
+    <!-- DataTables Selection plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.0.1/css/select.bootstrap.min.css"/>
     <!-- DataTables SearchHighlight -->
     <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/1.10.9/features/searchHighlight/dataTables.searchHighlight.css" />
       
@@ -76,7 +78,7 @@
                 Type your desired query in the searchbox on the right. Triple click or highlight a row to select                   the contents to paste elsewhere.  <br /><br />
                 Use the dropdown to select how many results are visible at a time. Triple click or highlight a row                 to select the contents to paste elsewhere. 
             </p> -->
-        </div>
+        
         <!-- Google Taxo Table -->
         <table id="example" class="table" cellspacing="0" width="100%">
         <thead>
@@ -6305,7 +6307,7 @@
 	   </tbody>
     </table>
     </div>
-      
+    </div> 
     <a href="#" class="back-to-top">Top</a>
     </div>   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -6316,6 +6318,8 @@
     <script src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
     <!-- Hilight Plugin -->
     <script src="http://bartaz.github.io/sandbox.js/jquery.highlight.js" type="text/javascript"></script>
+    <!-- DataTables Select plugin -->
+    <script src="https://cdn.datatables.net/select/1.0.1/js/dataTables.select.min.js" type="text/javascript"></script>
     <!-- DataTables SearchHilight -->
     <script src="http://cdn.datatables.net/plug-ins/1.10.9/features/searchHighlight/dataTables.searchHighlight.min.js" type="text/javascript"></script> 
     <script type="text/javascript" language="javascript">
@@ -6323,7 +6327,10 @@
 $(document).ready( function () {
     $('#example').DataTable( {
         searchHighlight: true,
-        "lengthMenu": [ [15, 25, 50, -1], [15, 25, 50, "All"] ]
+        select: {
+        items: 'row'
+        },
+        "lengthMenu": [ [-1, 15, 25, 50], [ "All", 15, 25, 50] ]
     } );
     
     var offset = 220;
